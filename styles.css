@@ -1,0 +1,154 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+ :root {
+--BrightRed: hsl(12, 88%, 59%);
+--DarkBlue: hsl(228, 39%, 23%);
+--DarkGrayishBlue: hsl(227, 12%, 61%);
+--VeryDarkBlue: hsl(233, 12%, 13%);
+--VeryPaleRed: hsl(13, 100%, 96%);
+--VaryLightGray: hsl(0, 0%, 98%);
+
+ }
+
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+font-family: 'Poppins', sans-serif;
+background-color: var(--VaryLightGray);
+min-height: 100vh;
+}
+
+.generalConatiner {
+    margin-bottom: 20rem;
+}
+
+.headerContainer {
+    display: flex;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    justify-content: space-between;
+   
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.heroimg {
+    margin-top: 2rem;
+  width: 500px;
+  height: 400px;
+}
+
+.heroimg img {
+    width: 100%;
+}
+
+.herotittle {
+    padding:  0 2rem;
+    margin-top: 1rem;
+    text-align: center;
+  
+ 
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    color: var(--DarkBlue);
+    margin: 1rem 0;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--DarkGrayishBlue);
+}
+
+.btnContainer {
+    padding: 0 5rem;
+    margin-top: 2rem;
+}
+
+.getBtn {
+    display: block;
+     text-align: center;
+     text-decoration: none;
+     background-color: var(--BrightRed);
+     color: var(--VaryLightGray);
+    padding: 1rem;
+    border-radius: 30px;
+     
+}
+
+.articleContainer {
+    
+}
+
+.articleDesc {
+    margin: 1rem auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.articleDesc h3 {
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--DarkBlue);
+    margin: 1rem 0;
+
+}
+
+.articleDesc p {
+    font-size: 17px;
+    line-height: 32px;
+    color: var(--DarkGrayishBlue);
+    text-align: center;
+
+}
+
+.articleDesc2 {
+    padding-left: 1.5rem;
+
+}
+
+.articletitle {
+    display: flex;
+    background-color: var(--VeryPaleRed);
+ 
+}
+
+.art2_container {
+    margin: 3rem 0;
+}
+
+.art2_title{
+    background-color: var(--BrightRed);
+    border-radius: 24px;
+    padding: .8rem 1.6rem;
+    font-size: 18px;
+    color: var(--VaryLightGray);
+    margin-right: .4rem;
+}
+
+.art2_title2{
+   
+    padding-top: .8rem;
+    font-size: 16px;
+    color: var(--VeryDarkBlue);
+    font-weight: 700;
+}
+
+.art2_desc {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--DarkGrayishBlue);
+    margin-top: 1rem;
+    
+}
+
