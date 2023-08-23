@@ -1,154 +1,395 @@
- *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
- }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
- :root {
---BrightRed: hsl(12, 88%, 59%);
---DarkBlue: hsl(228, 39%, 23%);
---DarkGrayishBlue: hsl(227, 12%, 61%);
---VeryDarkBlue: hsl(233, 12%, 13%);
---VeryPaleRed: hsl(13, 100%, 96%);
---VaryLightGray: hsl(0, 0%, 98%);
-
- }
-
+:root {
+  --BrightRed: hsl(12, 88%, 59%);
+  --DarkBlue: hsl(228, 39%, 23%);
+  --DarkGrayishBlue: hsl(227, 12%, 61%);
+  --VeryDarkBlue: hsl(233, 12%, 13%);
+  --VeryPaleRed: hsl(13, 100%, 96%);
+  --VaryLightGray: #fafafa;
+}
 
 body {
-    font-family: 'Be Vietnam Pro', sans-serif;
-font-family: 'Poppins', sans-serif;
-background-color: var(--VaryLightGray);
-min-height: 100vh;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--VaryLightGray);
+  min-height: 100vh;
 }
 
 .generalConatiner {
-    margin-bottom: 20rem;
 }
 
 .headerContainer {
-    display: flex;
-    margin-top: 2rem;
-    padding: 0 1rem;
-    justify-content: space-between;
-   
+  display: flex;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+.modal_container {
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s ease-in-out;
+}
+.overlay.show {
+ visibility: visible;
+ opacity: 1;
+}
+
+.modalController {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+.modal_menu {
+  width: 95%;
+  height: 22rem;
+  background-color: var(--VaryLightGray);
+  position: absolute;
+  top: -30rem;
+  border-radius: 10px;
+  transition: .6s ease-in-out;
+  
+}
+
+.modal_menu.open {
+   top: 2rem;
+}
+
+.openMenu {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+.closeMenu {
+    z-index: 1000;
+  
+    position: absolute;
+    top: -5rem;
+    right: .5rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+li {
+  list-style: none;
+  color: var(--VeryDarkBlue);
+  font-size: 22px;
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
 .hero {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
 .heroimg {
-    margin-top: 2rem;
+  margin-top: 2rem;
   width: 500px;
   height: 400px;
 }
 
 .heroimg img {
-    width: 100%;
+  width: 100%;
 }
 
 .herotittle {
-    padding:  0 2rem;
-    margin-top: 1rem;
-    text-align: center;
-  
- 
+  padding: 0 2rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.3rem;
-    color: var(--DarkBlue);
-    margin: 1rem 0;
+  font-size: 2.3rem;
+  color: var(--DarkBlue);
+  margin: 1rem 0;
 }
 
 .hero p {
-    font-size: 18px;
-    line-height: 32px;
-    color: var(--DarkGrayishBlue);
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--DarkGrayishBlue);
 }
 
 .btnContainer {
-    padding: 0 5rem;
-    margin-top: 2rem;
+  padding: 0 5rem;
+  margin-top: 2rem;
 }
 
 .getBtn {
-    display: block;
-     text-align: center;
-     text-decoration: none;
-     background-color: var(--BrightRed);
-     color: var(--VaryLightGray);
-    padding: 1rem;
-    border-radius: 30px;
-     
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--BrightRed);
+  color: var(--VaryLightGray);
+  padding: 1rem;
+  border-radius: 30px;
 }
 
 .articleContainer {
-    
 }
 
 .articleDesc {
-    margin: 1rem auto;
-    width: 100%;
-    padding: 0 2rem;
+  margin: 1rem auto;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .articleDesc h3 {
-    font-size: 2.4rem;
-    text-align: center;
-    color: var(--DarkBlue);
-    margin: 1rem 0;
-
+  font-size: 2.4rem;
+  text-align: center;
+  color: var(--DarkBlue);
+  margin: 1rem 0;
 }
 
 .articleDesc p {
-    font-size: 17px;
-    line-height: 32px;
-    color: var(--DarkGrayishBlue);
-    text-align: center;
-
+  font-size: 17px;
+  line-height: 32px;
+  color: var(--DarkGrayishBlue);
+  text-align: center;
 }
 
 .articleDesc2 {
-    padding-left: 1.5rem;
-
+  padding-left: 1.5rem;
 }
 
 .articletitle {
-    display: flex;
-    background-color: var(--VeryPaleRed);
- 
+  display: flex;
+  background-color: var(--VeryPaleRed);
 }
 
 .art2_container {
-    margin: 3rem 0;
+  margin: 3rem 0;
 }
 
-.art2_title{
-    background-color: var(--BrightRed);
-    border-radius: 24px;
-    padding: .8rem 1.6rem;
-    font-size: 18px;
-    color: var(--VaryLightGray);
-    margin-right: .4rem;
+.art2_title {
+  background-color: var(--BrightRed);
+  border-radius: 24px;
+  padding: 0.8rem 1.6rem;
+  font-size: 18px;
+  color: var(--VaryLightGray);
+  margin-right: 0.4rem;
 }
 
-.art2_title2{
-   
-    padding-top: .8rem;
-    font-size: 16px;
-    color: var(--VeryDarkBlue);
-    font-weight: 700;
+.art2_title2 {
+  padding-top: 0.8rem;
+  font-size: 16px;
+  color: var(--VeryDarkBlue);
+  font-weight: 700;
 }
 
 .art2_desc {
-    font-size: 16px;
-    line-height: 28px;
-    color: var(--DarkGrayishBlue);
-    margin-top: 1rem;
-    
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--DarkGrayishBlue);
+  margin-top: 1rem;
 }
 
+.Tsm_title {
+  text-align: center;
+  color: var(--DarkBlue);
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.sliderGeneral_container {
+  padding: 0 1rem;
+}
+
+.TsmSlider_container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.Tsm_slides {
+  margin-top: 8rem;
+  border-radius: 15px;
+  flex: 1 0 100%;
+  transition: transform 0.3s ease;
+  height: 15rem;
+  background-color: rgb(240, 239, 242);
+}
+
+.TsmContents {
+  position: relative;
+}
+
+.Tsm_profile {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profilControl {
+  width: 100px;
+  height: 100px;
+}
+
+.profilControl img {
+  width: 100%;
+}
+
+.Tsm_desc {
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.Tsm_desc_title {
+  text-align: center;
+  color: var(--DarkBlue);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-top: 4rem;
+  text-transform: capitalize;
+}
+
+.Tsm_desc_desc {
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--VeryDarkBlue);
+  margin-top: 0.4rem;
+}
+
+.Tsm_btnConatiner {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--VeryPaleRed);
+  margin: 1rem 0.4rem;
+  border: 2px solid var(--BrightRed);
+}
+
+.active {
+  background-color: var(--BrightRed);
+}
+
+.newsettler {
+  background-color: var(--BrightRed);
+  width: 100%;
+  height: 25rem;
+  margin-top: 4rem;
+  padding: 4rem 4rem;
+}
+
+.newSt_title {
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--VaryLightGray);
+}
+
+.newSt_desc {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--BrightRed);
+  background-color: var(--VaryLightGray);
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+.ftContainer {
+  background-color: var(--VeryDarkBlue);
+  height: 30rem;
+}
+
+.ftinput_container {
+  display: flex;
+  justify-content: space-between;
+  /* justify-items: center; */
+  padding: 2rem 1rem;
+}
+
+.ftinput_container input {
+  width: 100%;
+  margin-right: 1rem;
+  border-radius: 30px;
+  padding: 0 1rem;
+  outline: none;
+  border: none;
+}
+
+input::placeholder {
+  font-size: 18px;
+}
+
+.inputBtn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
+  background-color: var(--BrightRed);
+  color: var(--VaryLightGray);
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+.Ftlinks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+}
+
+ul {
+  /* margin: 0  2rem; */
+}
+
+.ft_links {
+  display: block;
+  text-decoration: none;
+  color: var(--VaryLightGray);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.FtIcons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+
+.ftLogo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.ftLogo svg {
+  fill: #f3603c;
+  color: red;
+}
