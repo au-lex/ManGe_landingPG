@@ -16,21 +16,38 @@
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-family: "Poppins", sans-serif;
-  background-color: var(--VaryLightGray);
+  /* background-color: var(--VaryLightGray); */
   min-height: 100vh;
-  /* overflow: hidden; */
+
 
 }
 
 .generalConatiner {
+  overflow-x: hidden;
+  /* padding-top: 5rem; */
 }
 
-.headerContainer {
-  display: flex;
-  margin-top: 2rem;
-  padding: 0 3rem;
-  justify-content: space-between;
+
+.logo2 {
+  display: none;
 }
+
+.headerContainer_sm {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+    top: 0;
+    width: 100%;
+  padding: 1rem 2rem;
+    background-color: var(--VaryLightGray);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+}
+
+.headerContainer{
+  display: none;
+}
+
 
 .modal_container {
   position: relative;
@@ -70,7 +87,7 @@ body {
 }
 
 .modal_menu.open {
-   top: -1rem;
+   top: 4rem;
 }
 
 .openMenu {
@@ -105,12 +122,16 @@ li {
   font-weight: 600;
 }
 
+.dskLinks {
+  display: none;
+}
+
 .hero {
- 
+ margin-top: 8rem;
 }
 
 .heroimg {
-  margin-top: 2rem;
+  margin-top: 0rem;
   width: 400px;
   height: 400px;
 }
@@ -393,4 +414,487 @@ ul {
 .ftLogo svg {
   fill: #f3603c;
   color: red;
+}
+
+.getBtn2 {
+  display: none;
+}
+
+.ftContainer {
+  display: block;
+}
+
+
+
+.ftContainer_dsk {
+  background-color: var(--VeryDarkBlue);
+display: none;
+  height: 20rem;
+}
+
+.getBtn_dsk  {
+  display: none;
+}
+
+
+
+@media screen and (min-width: 320px){
+
+  .heroimg {
+    margin-top: 2rem;
+    width: 350px;
+    height: 350px;
+  }
+
+
+
+  
+  .herotittle h1 {
+    font-size: 25px;
+  }
+
+
+  .articleDesc h3{
+    font-size: 25px;
+    margin-top: 3rem;
+  }
+  
+  .Tsm_title {
+    font-size: 25px;
+  }
+
+  }
+
+
+
+
+@media screen and (min-width: 375px){
+
+
+
+  .herotittle h1 {
+    font-size: 28px;
+  }
+.articleDesc h3{
+  font-size: 28px;
+  margin-top: 3rem;
+}
+
+.Tsm_title {
+  font-size: 28px;
+}
+
+}
+
+
+@media screen and (min-width: 390px){
+
+  .heroimg {
+    margin-top: 2rem;
+    width: 430px;
+    height: 400px;
+  }
+  }
+
+
+
+
+@media screen and (min-width: 425px){
+
+  .heroimg {
+    margin-top: 2rem;
+    width: 450px;
+    height: 400px;
+  }
+  }
+
+
+  @media screen and (min-width: 768px){
+
+    .heroimg {
+      margin-top: 2rem;
+      width: 850px;
+      height: 750px;
+    }
+    }
+
+
+
+@media screen and (min-width: 1200px){
+  
+
+  
+.logo2 {
+  display: block;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: none;
+}
+
+  .headerContainer {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 8rem;
+    justify-content: space-between;
+    background-color: var(--VaryLightGray);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+  } 
+
+  .dskLinks {
+    display: block;
+  } 
+
+  .dskLink_container {
+    display: flex;
+    padding: 1rem 0;
+  }
+
+  .dskLink_container li {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    font-weight: 500;
+  }
+
+
+  .btnContainer {
+    padding: 1rem 8rem;
+    margin-top: 0rem;
+  }
+
+
+  .getBtn_dskContainer {
+      width: 50%;
+      margin-top: 2rem;
+      margin-left: 2rem;
+  }
+
+  .getBtn_dsk {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--BrightRed);
+    color: var(--VaryLightGray);
+    padding: .5rem 1.2rem;
+    border-radius: 30px;
+  }
+  
+  .getBtn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--BrightRed);
+    color: var(--VaryLightGray);
+    padding: .5rem 1.2rem;
+    border-radius: 30px;
+  }
+  .openMenu {
+    display: none;
+  }
+
+
+
+
+  .hero {
+   
+  display: flex;
+  justify-content: center;
+  margin-top: 18rem;
+}
+
+.heroDesc {
+  order: -1;
+  width: 40%;
+  margin-right: 10rem;
+ 
+ 
+}
+
+.heroimg {
+    margin-top: 2rem;
+    width: 700px;
+    height: 700px;
+  }
+  
+  .heroimg img {
+    width: 100%;
+  }
+  
+  .herotittle {
+    padding: 0 2rem;
+    margin-top: 1rem;
+    text-align: center;
+   
+   
+  }
+  
+  .hero h1 {
+    font-size: 4.5rem;
+    color: var(--DarkBlue);
+    margin: 1rem 0;
+  }
+  
+  .hero p {
+    font-size: 17px;
+    line-height: 32px;
+    width: 50%;
+    color: var(--DarkGrayishBlue);
+    text-align: start;
+    margin-left: 4rem;
+    
+   
+  }
+
+
+
+  .sliderGeneral_container {
+    padding: 0 1rem;
+  }
+  
+  .TsmSlider_container {
+    display: flex;
+    overflow:visible;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .Tsm_slides {
+    margin-top: 8rem;
+    border-radius: 15px;
+    flex: 1 0 50%;
+    transition: transform 0.3s ease;
+    height: 15rem;
+    background-color: rgb(240, 239, 242);
+    margin-right: 3rem;
+  }
+  
+  .TsmContents {
+    position: relative;
+  }
+  
+  .Tsm_profile {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .profilControl {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profilControl img {
+    width: 100%;
+  }
+  
+  .Tsm_desc {
+    padding: 0 8rem;
+    text-align: center;
+  }
+  
+  .Tsm_desc_title {
+    text-align: center;
+    color: var(--DarkBlue);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 4rem;
+    text-transform: capitalize;
+  }
+  
+  .Tsm_desc_desc {
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--VeryDarkBlue);
+    margin-top: 0.4rem;
+   
+  }
+
+
+  .articleContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10rem;
+    margin: 6rem 0;
+  }
+
+
+  .articletitle {
+ 
+    background-color:transparent;
+  }
+  
+  .articleDesc {
+    
+    margin-left: 6rem;
+  
+    }
+
+    .articleDesc h3 {
+      text-align: start;
+      
+        }
+        .articleDesc p {
+          text-align: start;
+          width: 80%;
+        }
+
+
+        .articleDesc2 {
+           /* width: 50%;  */
+           padding: 0 10rem;
+           margin-left: 10rem;
+        }
+      
+
+        .art2_title2 {
+          font-weight: 800;
+        }
+
+
+
+
+
+  .newsettler {
+    background-color: var(--BrightRed);
+    width: 100%;
+    height: 25rem;
+    margin-top: 4rem;
+    padding: 4rem 4rem;
+  }
+  
+.newsettlerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+}
+
+  .newSt_title {
+    width: 40%;
+    padding: 2rem 0;
+    font-size: 2.4rem;
+    text-align: start;
+    color: var(--VaryLightGray);
+  }
+  
+  .newSt_desc {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--BrightRed);
+    background-color: var(--VaryLightGray);
+    padding-top: .8rem;
+    border-radius: 30px;
+    height: 3rem;
+  }
+
+
+
+
+
+.btnContainer2 {
+  padding: 0 50rem;
+}
+
+.getBtn_sm {
+  display: none;
+}
+
+
+
+.ftContainer {
+  display: none;
+}
+
+
+
+.ftContainer_dsk {
+  background-color: var(--VeryDarkBlue);
+  height: 20rem;
+  display: block;
+}
+
+.dsk_mainContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem;
+
+}
+
+.ftinput_container_dsk {
+  display: flex;
+ 
+  padding: 2rem 1rem;
+}
+
+.ftinput_container_dsk input {
+  width: 18rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: 30px;
+  padding-left: .8rem;
+  outline: none;
+  border: none;
+}
+
+
+
+.inputBtn_dsk {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
+  background-color: var(--BrightRed);
+  color: var(--VaryLightGray);
+ padding-top: .7rem;
+  border-radius: 30px;
+  height: 3rem;
+}
+
+.Ftlinks_dsk{
+ display: flex;
+
+}
+
+.Ftlinks_dsk ul {
+  margin: 0 4rem;
+}
+
+
+
+
+
+
+.ft_links_dsk {
+  display: block;
+  text-decoration: none;
+  color: var(--VaryLightGray);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.FtIcons_dsk {
+ display: flex;
+ padding-top: 8rem;
+
+  
+}
+
+.ft_icons_dsk {
+  padding: 0 1rem;
+}
+
+.ftLogo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+
+  
 }
