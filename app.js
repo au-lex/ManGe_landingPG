@@ -3,7 +3,7 @@ const Btn = document.querySelectorAll(".btn")
 const slides = document.querySelectorAll(".Tsm_slides");
 
 const openMenu = document.querySelector(".openMenu");
-const closeMenu = document.querySelector(".closeMenu");
+const closeMenu = document.querySelector(".cl");
 const modalMenu = document.querySelector(".modal_menu");
 const overlay = document.querySelector(".overlay");
 
@@ -16,16 +16,11 @@ openMenu.addEventListener("click", () => {
     }
     else {
         modalMenu.classList.add("open");
-        openMenu.innerHTML = '<i class="ri-close-line"></i>'; 
+        openMenu.innerHTML = '<i class="ri-close-line cl"></i>'; 
         overlay.classList.add("show")
     }
 });
 
-closeMenu.addEventListener("click", () => {
-    modalMenu.classList.remove("open");
-    openMenu.innerHTML = '<i class="ri-menu-line"></i>';
-    overlay.classList.remove("show")
-});
 
 
 const navLinks = document.querySelectorAll(".navLinks")

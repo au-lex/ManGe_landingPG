@@ -18,6 +18,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--VaryLightGray);
   min-height: 100vh;
+
 }
 
 .generalConatiner {
@@ -26,7 +27,7 @@ body {
 .headerContainer {
   display: flex;
   margin-top: 2rem;
-  padding: 0 1rem;
+  padding: 0 3rem;
   justify-content: space-between;
 }
 
@@ -57,8 +58,8 @@ body {
   justify-content: center;
 }
 .modal_menu {
-  width: 95%;
-  height: 22rem;
+  width: 85%;
+  height: 17rem;
   background-color: var(--VaryLightGray);
   position: absolute;
   top: -30rem;
@@ -68,7 +69,7 @@ body {
 }
 
 .modal_menu.open {
-   top: 2rem;
+   top: -1rem;
 }
 
 .openMenu {
@@ -78,12 +79,12 @@ body {
     
 }
 
-.closeMenu {
+.cl {
     z-index: 1000;
   
     position: absolute;
-    top: -5rem;
-    right: .5rem;
+    top: .6rem;
+    right: 1.5rem;
     cursor: pointer;
     font-size: 2.5rem;
     font-weight: 700;
@@ -95,22 +96,21 @@ nav {
   padding: 3rem 0;
 }
 li {
+  text-align: center;
   list-style: none;
   color: var(--VeryDarkBlue);
-  font-size: 22px;
+  font-size: 12px;
   margin-top: 1rem;
   font-weight: 600;
 }
 
 .hero {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+ 
 }
 
 .heroimg {
   margin-top: 2rem;
-  width: 500px;
+  width: 400px;
   height: 400px;
 }
 
@@ -190,17 +190,17 @@ li {
 .art2_title {
   background-color: var(--BrightRed);
   border-radius: 24px;
-  padding: 0.8rem 1.6rem;
-  font-size: 18px;
+  padding: 0.4rem 1.6rem;
+  font-size: 15px;
   color: var(--VaryLightGray);
   margin-right: 0.4rem;
 }
 
 .art2_title2 {
-  padding-top: 0.8rem;
-  font-size: 16px;
+  padding-top: 0.5rem;
+  font-size: 14px;
   color: var(--VeryDarkBlue);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .art2_desc {
@@ -345,7 +345,7 @@ li {
 }
 
 input::placeholder {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .inputBtn {
@@ -355,7 +355,7 @@ input::placeholder {
   width: 30%;
   background-color: var(--BrightRed);
   color: var(--VaryLightGray);
-  padding: 1rem;
+  padding: .4rem;
   border-radius: 30px;
 }
 
@@ -373,7 +373,7 @@ ul {
   display: block;
   text-decoration: none;
   color: var(--VaryLightGray);
-  font-size: 1.4rem;
+  font-size: .8rem;
   margin-top: 1rem;
 }
 
